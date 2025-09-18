@@ -3,6 +3,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     backend_base_url: str = "http://localhost:8000"
+    database_url: str = "sqlite:///./newsbite.db"
     timezone: str = "Asia/Seoul"
 
     class Config:
