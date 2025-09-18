@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .routers.health import router as health_router
 from .routers.news import router as news_router
 from .routers.categories import router as categories_router
+from .routers.subscriptions import router as subscriptions_router
 from .core.config import settings
 
 
@@ -25,4 +26,5 @@ def read_root():
 app.include_router(health_router)
 app.include_router(news_router)
 app.include_router(categories_router)
+app.include_router(subscriptions_router)
 
